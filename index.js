@@ -3,6 +3,7 @@ const app = express()
 const persons = require('./persons.json')
 const morgan = require('morgan')
 
+app.use(express.static('dist'))
 app.use(express.json())
 app.use(morgan((tokens, req, res) => {
     return [
